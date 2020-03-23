@@ -34,7 +34,7 @@ module.exports = function toReadable (number) {
         8: 'eighty',
         9: 'ninety'
     }
-   
+
     if (number == 0) {
        return 'zero';
     } else if (number >= 0 && number <= 10) { 
@@ -49,7 +49,7 @@ module.exports = function toReadable (number) {
                 number > 70 && number < 80 ||
                 number > 80 && number < 90 ||
                 number > 90 && number < 100) {
-        return numbers2090[+array[0]] + ' ' + numbers010[+array[1]];
+                    return numbers2090[+array[0]] + ' ' + numbers010[+array[1]];
     } else if (number == 30 ||
                 number == 40 ||
                 number == 50 ||
@@ -57,7 +57,7 @@ module.exports = function toReadable (number) {
                 number == 70 ||
                 number == 80 ||
                 number == 90){
-        return numbers2090[+array[0]];
+                    return numbers2090[+array[0]];
     }  else if (number == 100 ||
                 number == 200 ||
                 number == 300 ||
@@ -67,7 +67,7 @@ module.exports = function toReadable (number) {
                 number == 700 ||
                 number == 800 ||
                 number == 900) {
-        return numbers010[+array[0]] + ' hundred';
+                    return numbers010[+array[0]] + ' hundred';
     } else if (number > 120 && number < 130 ||
                 number > 130 && number < 140 ||
                 number > 140 && number < 150 || 
@@ -140,7 +140,7 @@ module.exports = function toReadable (number) {
                 number > 970 && number < 980 || 
                 number > 980 && number < 990 ||
                 number > 990 && number < 1000) {
-        return numbers010[+array[0]] + ' hundred' + ' ' + numbers2090[+array[1]] + ' ' + numbers010[+array[2]];
+                    return numbers010[+array[0]] + ' hundred' + ' ' + numbers2090[+array[1]] + ' ' + numbers010[+array[2]];
     } else if (number > 110 && number < 120 ||
                 number > 210 && number < 220 ||
                 number > 310 && number < 320 ||
@@ -153,7 +153,7 @@ module.exports = function toReadable (number) {
                     let string = number.toString();
                     let substring = string.slice(1);
                     let index = +substring;
-        return numbers010[+array[0]] + ' hundred ' + numbers1120[index];
+                    return numbers010[+array[0]] + ' hundred ' + numbers1120[index];
     } else if (number > 100 && number <= 110 ||
                 number > 200 && number <= 210 ||
                 number > 300 && number <= 310 ||
@@ -166,8 +166,8 @@ module.exports = function toReadable (number) {
                     let string = number.toString();
                     let substring = string.slice(1);
                     let index = +substring;
-        return numbers010[+array[0]] + ' hundred ' + numbers010[index];
+                    return numbers010[+array[0]] + ' hundred ' + numbers010[index];
     }  else {
-        return numbers010[+array[0]] + ' hundred ' + numbers2090[+array[1]];
+            return numbers010[+array[0]] + ' hundred ' + numbers2090[+array[1]];
     }
 }
